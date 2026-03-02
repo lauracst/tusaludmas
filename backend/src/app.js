@@ -16,6 +16,7 @@ app.use(express.json());
 app.use('/api', authRoutes); // Conectamos tus rutas de login
 
 app.use('/api', patientRoutes); 
+app.use('/api/patients', patientRoutes); // CAMBIO: Aseguramos que las rutas de pacientes estén bajo /api/patients
 
 app.use('/api/appointments', appointmentRoutes);
 app.use('/api/alarms', alarmRoutes);
